@@ -1,0 +1,32 @@
+---- Chapter Exercise [Reading Syntax]
+
+- 1
+        a) concat [[1, 2, 3], [4, 5, 6]         <- CORRECT.
+
+        b) ++ [1, 2, 3] [4, 5, 6]               <- INCORRECT. ++ is an infix operator. 
+           (++) [1, 2, 3] [4, 5, 6]                Use () to utilize prefix notation. 
+        
+        c) (++) "hello" " world"                <- CORRECT.
+        
+        d) ["hello" ++ " world]                 <- INCORRECT. Missing speech mark.
+           ["hello" ++ " world"]                
+
+        e) 4 !! "hello"                         <- INCORRECT. Has the type signature of (!!) :: [a] -> Int -> a
+           "hello" !! 4                            The List needs to be on the left hand side. 
+        
+        f) (!!) "hello" 4                       <- CORRECT. Follows the type signature.
+
+        g) take "4 lovely"                      <- INCORRECT. Integer to specify the number of elements, is inside the String.
+           take 4 "lovely"                         Place 4 outside of the speech marks.
+
+        h) take 3 "awesome"                     <- CORRECT.
+
+
+- 2
+        a -> d
+        b -> c
+        c -> e
+        d -> a
+        e -> b
+
+
