@@ -1,0 +1,48 @@
+---- Chapter Exercise [Length of List]
+
+Pre-defined Lists:
+  awesome = ["Papuchon", "curry", ":)"]
+  alsoAwesome = ["Quake", "The Simons"]
+  allAwesome = [awesome, alsoAwesome]
+
+
+
+- 1
+        length :: [a] -> Integer         <- Not completely correct. REPL shows:     length :: Foldable t => t a -> Int
+                                            Although, [a] is still completely acceptable in my current case.
+- 2  
+        a) 5
+
+        b) 3
+
+        c) 2
+
+        d) 5
+
+- 3     
+        6 / 3                            <- Works without a problem.
+
+        6 / length [1, 2, 3]             <- Does not work as length returns an Integral. length :: t a -> Int
+        
+
+- 4
+        6 `div` length [1, 2, 3]         <- Works when using `div` instead as it uses integral division. 
+                                            div :: Integral a => a -> a -> a
+
+- 5   
+        2 + 3 == 5 :: Bool   
+        Result: True                       
+                                      
+- 6
+        x + 3 == 5 :: Bool
+        Result: False
+
+
+- 7
+        a) True
+        b) Does not work. All items in a list need to have the same time.
+        c) 5
+        d) False
+        e) False
+        
+            
