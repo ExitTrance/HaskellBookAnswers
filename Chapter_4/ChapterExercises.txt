@@ -1,0 +1,17 @@
+---- Chapter Exercise [Find the Mistakes]
+
+
+        1) not True && true                 <- Spelling mistake.
+           not True && True
+
+        2) not (x = 6)                      <- Missing =.
+           not (x == 6)
+
+        3) (1 * 2) > 5                      <- Correct.
+
+        4) [Merry] > [Happy]                <- Missing speech marks.
+           ["Merry"] > ["Happy"]
+
+        5) [1, 2, 3] ++ "look at me!"       <- Cannot concatenate different types.
+           ['1', '2', '3'] ++ "look at me!"    Possible fix would be to convert the numbers to chars.
+
