@@ -1,0 +1,21 @@
+1 a <- Correct
+2 d <- Correct
+3 d <- Correct
+4 c <- Correct
+5 a <- Correct
+6 e <- Correct
+7 d <- Correct
+8 a <- Correct
+9 c <- Correct
+
+
+Apply yourself
+
+1 (++) :: [Char] -> [Char] -> [Char]
+2
+3
+4
+5
+6
+7
+8
