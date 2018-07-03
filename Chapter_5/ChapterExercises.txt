@@ -1,0 +1,62 @@
+Type Arguments
+
+    1)  a 
+    2)  d 
+    3)  d 
+    4)  c 
+    5)  a 
+    6)  e 
+    7)  d 
+    8)  a 
+    9)  c 
+
+
+Apply yourself
+
+    1) Changes to [Char]
+    2) Changes to Fractional 
+    3) Changes to Int -> [Char]
+    4) Changes to Int -> Bool
+    5) Changes to Char -> Bool
+
+
+Multiple Choice
+
+    1) A value of type [a] is
+        c] a list whose elements are all of some type a
+
+    2) A function of type [[a]] -> [a] could
+        a] take a list of strings as an argument
+
+    3) A function of type [a] -> Int -> a
+        b] returns one element of type 𝑎 from a list
+
+    4) A function of type (a, b) -> a
+        c] takes a tuple argument and returns the first value
+
+
+Determine the type
+<- See determineType.hs
+
+Does it compile
+<- See doesItCompile.hs
+
+
+Type variable or specific type constructor?
+
+    2)  f :: zed -> Zed -> Blah
+        FullyPolymorphic -> Concrete -> Concrete
+
+    3)  f :: Enum b => a -> b -> C
+        FullyPolymorphic -> ConstrainedPolymorphic -> Concrete
+
+    4)  f :: f -> g -> C
+        FullyPolymorphic -> FullyPolymorphic -> Concrete
+    
+Write a type signature
+<- typeSignature.hs
+
+
+
+
+
