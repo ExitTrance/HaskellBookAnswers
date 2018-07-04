@@ -2,7 +2,7 @@
 module MyDataType where
 
 -- Type and Data Constructor usually have the same name.
--- Use of ' used here to make it more obvious that they are in different
+-- ' is used here to make it more obvious that they are in different
 -- namespaces.
 data Trivial = 
   Trivial' 
