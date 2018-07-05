@@ -23,7 +23,7 @@ data Date =
   deriving Show
 
 -- Usage of :s -Wall is important here in case we make any mistakes.
--- If we left out the uncoditional case for example,
+-- If we left out the unconditional case for example,
 -- the program would blow up at run time. With -Wall, we are notified
 -- of possible warnings at compile time.
 instance Eq DayOfWeek where
@@ -40,3 +40,10 @@ instance Eq Date where
   (==) (Date weekday dayOfMonth)
        (Date weekday' dayOfMonth') = 
     weekday == weekday' && dayOfMonth == dayOfMonth'
+
+
+data Identity a = 
+  Identity a
+
+instance Eq a => Eq (Identity a) where
+  (==) (Identity v) (Identity v') = v == v'
