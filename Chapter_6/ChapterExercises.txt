@@ -1,0 +1,21 @@
+Will they work?
+
+1.  Works and the result is 5. Valid function call, which can be seen
+    by looking at the type signature of max: max :: a -> a -> a
+    
+    max (length [1, 2, 3]) (length [8, 9, 10, 11, 12])
+
+
+2.  Works. Will return LT as 3*4 < 3*5. 
+    
+    compare (3 * 4) (3 * 5)
+
+
+3.  Does not work. Types to be compared need to be the same.
+    compare :: a -> -> a -> Ordering
+    
+    compare "Julie" True
+
+
+4.  Works, as Num implements an instance of Ord. Result is False.
+    (5 + 3) > (3 + 6)
