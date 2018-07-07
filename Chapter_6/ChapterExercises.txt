@@ -19,3 +19,19 @@ Will they work?
 
 4.  Works, as Num implements an instance of Ord. Result is False.
     (5 + 3) > (3 + 6)
+
+
+
+Multiple choice
+
+1. c
+
+2. a
+
+3. a
+
+4. c because divMod and quotRem return a tuple
+
+5. a
+
+
