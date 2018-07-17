@@ -1,0 +1,11 @@
+Multiple choice
+
+1 May resolve to values of different types, depending on inputs (d)
+
+2 Char -> [String] (b)
+
+3 (Ord a, Num a) => a -> Bool
+
+4 Is a higher-order function (b)
+
+5 f True :: Bool (a)
