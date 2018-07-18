@@ -2,20 +2,20 @@
 
 ## Review of types
 
-**1. What is the type of [[True, False], [True, True], [False, True]]?**        \
+##### 1. What is the type of [[True, False], [True, True], [False, True]]?        \
    `d) [[Bool]]` 
 
-**2. Which of the following has the same type as [[True, False], [True, True], [False, True]]?**\
+##### 2. Which of the following has the same type as [[True, False], [True, True], [False, True]]?\
    `b) [[3 == 3], [6 > 5], [3 < 4]]`
 
-**3. For the following function, which of the following is true?**\
+##### 3. For the following function, which of the following is true?\
 ```haskell
  func :: [a] -> [a] -> [a]          
  func x y = x ++ y
 ```
    `d) all of the above`
    
-**4. For the func code above, which is a valid application of func to both of its arguments?**\
+##### 4. For the func code above, which is a valid application of func to both of its arguments?\
    `b) func "Hello" "World"`
  
 
@@ -39,22 +39,22 @@ frappe :: String -> String -> String
 frappe = flippy "haha"
 ```
 
-**1. What is the value of appedCatty "woohoo!" ?**\
+##### 1. What is the value of appedCatty "woohoo!" ?\
 `"woops mrow woohoo"`
 
-**2. frappe "1"**\
+##### 2. frappe "1"\
 `"1 mrow haha"`
 
-**3. frappe (appedCatty "2")**\
+##### 3. frappe (appedCatty "2")\
 `"woops mrow 2 mrow haha "`
 
-**4. appedCatty (frappe "blue")**\
+##### 4. appedCatty (frappe "blue")\
 `"woops mrow blue mrow haha"`
 
-**5. cattyConny (frappe "pink")(cattyConny "green" (appedCatty "blue"))**\
+##### 5. cattyConny (frappe "pink")(cattyConny "green" (appedCatty "blue"))\
 `"pink mrow haha mrow green mrow woops mrow blue"`
 
-**6. cattyConny (flippy "Pugs" "are") "awesome"**\
+##### 6. cattyConny (flippy "Pugs" "are") "awesome"\
 `"are mrow Pugs mrow awesome"`
 
 ## Recursion
@@ -67,8 +67,7 @@ dividedBy num denom = go num denom 0
          | otherwise = go (n - d) d (count + 1)
 ```
 
-**1. Write out the steps for reducing dividedBy 15 2 to its final answer
-according to the Haskell code.**
+##### 1. Write out the steps for reducing dividedBy 15 2 to its final answer according to the Haskell code.
 
 ```haskell
 go (15 - 2) 2 (0 + 1)
@@ -81,8 +80,7 @@ go ( 3 - 2) 2 (6 + 1)
 (1, 7)
 ```         
 
-**2. Write a function that recursively sums all numbers from 1 to n, n being the argument.
-So that if n was 5, you’d add 1 + 2 + 3 + 4 + 5 to get 15. The type should be (Eq a, Num a) => a -> a.**
+##### 2. Write a function that recursively sums all numbers from 1 to n, n being the argument.So that if n was 5, you’d add 1 + 2 + 3 + 4 + 5 to get 15. The type should be (Eq a, Num a) => a -> a.
 
 ```haskell
 sumNum :: (Eq a, Num a) => a -> a
@@ -90,9 +88,7 @@ sumNum 1 = 1
 sumNum x = x + sumNum (x - 1)   
 ```
 
-**3. Write a function that multiplies two integral numbers using
-recursive summation. The type should be (Integral a) => a ->
-a -> a.**
+##### 3. Write a function that multiplies two integral numbers using recursive summation. The type should be (Integral a) => a -> a -> a.
 
 ```haskell
 -- Also covers the case 0, but crashes with negative numbers.   
