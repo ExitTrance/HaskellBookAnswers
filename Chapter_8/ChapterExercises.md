@@ -102,3 +102,62 @@ multSum num denom = go num denom 0 0
          | count == n = sum
          | otherwise = go n d (count + 1) (sum + d) 
 ```
+
+## Fixing dividedBy
+
+```haskell
+data DividedResult = 
+    Result Integer
+  | DividedByZero deriving Show
+
+dividedBy :: Integral a => a -> a -> DividedResult
+dividedBy num denom = go num denom 0
+  where go n d count
+         | d == 0 = DividedByZero 
+         | abs n < abs d = Result count
+         | n < 0 && d < 0 = go (n - d) d (count + 1) -- neg neg
+         | n > 0 && d > 0 = go (n - d) d (count + 1) -- pos pos
+         | otherwise = go (n + d) d (count - 1) -- neg pos | pos neg
+
+```
+
+
+## McCarthy 91 function
+```haskell
+mc91 :: Integral a => a -> a
+mc91 x 
+  | x > 100 = x - 10
+  | otherwise = mc91 . mc91 $ x + 11
+```
+
+## Numbers into words
+```haskell
+module WordNumber where
+
+import Data.List(intersperse)
+
+digitToWord :: Int -> String
+digitToWord n = 
+  case n of
+    0 -> "zero"
+    1 -> "one" 
+    2 -> "two"
+    3 -> "three"
+    4 -> "four"
+    5 -> "five"
+    6 -> "six"
+    7 -> "seven"
+    8 -> "eight"
+    9 -> "9"
+
+    
+digits :: Int -> [Int]
+digits n = go n []
+  where go n list
+         | n < 10 = n:list
+         | otherwise = go (div n 10) ((mod n 10):list)
+
+
+wordNumber :: Int -> String
+wordNumber n = concat . intersperse "-" . map digitToWord $ digits n
+```
