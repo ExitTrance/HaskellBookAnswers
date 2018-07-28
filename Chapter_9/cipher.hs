@@ -4,7 +4,9 @@ import Data.Char
 
 
 -- This code is incredibly error prone if not enough care 
--- is taking with the values supplied to mod. 
+-- is taking with the values supplied to mod. However,
+-- it does work with both upper case and lower case letters,
+-- and does not lose them during encryption and decryption.
 
 -- If I were to write this again, I would probably use a function
 -- to handle the modular arithmetic, as there are common values,
