@@ -43,7 +43,7 @@ import Data.Char
 
 
 -- This code is incredibly error prone if not enough care 
--- is taking with the values supplied to mod. However,
+-- is taken with the values supplied to mod. However,
 -- it does work with both upper case and lower case letters,
 -- and does not lose them during encryption and decryption.
 
