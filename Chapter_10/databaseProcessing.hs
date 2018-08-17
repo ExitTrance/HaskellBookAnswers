@@ -26,10 +26,16 @@ filterDbDate' = mapMaybe $ \case
   DbDate time -> Just time
   _ -> Nothing
 
+-- Using list comprehension
+filterDbDate2 :: [DatabaseItem] -> [UTCTime]
+filterDbDate2 xs = [t | (DbDate t) <- xs ]
+
+-- Using foldr
 filterDbDate :: [DatabaseItem] -> [UTCTime]
 filterDbDate = foldr f [] where 
     f (DbDate x) y = x : y
     f _ y          = y
+
 
 filterDbNumber :: [DatabaseItem] -> [Integer]
 filterDbNumber = foldr f [] where
@@ -43,4 +49,4 @@ sumDb :: [DatabaseItem] -> Integer
 sumDb = foldr (+) 0 . filterDbNumber
 
 avgDb :: [DatabaseItem] -> Double
-avgDb xs = fromIntegral (sumDb xs) / fromIntegral(length . filterDbNumber $ xs)
+avgDb xs = fromIntegral (sumDb xs) / fromIntegral(length . filterDbNumber $ xs)   
