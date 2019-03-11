@@ -32,8 +32,8 @@ nvn = [(n, v, n) | n <- nouns, v <- verb]
 ##### 2
 ```haskell
 -- seekritFunc :: [Char] -> Int
--- Length of string divided by 1. 
--- Ends up returning just the length of the string.
+-- Amount of characters of words in a given string, 
+-- divided (integer division) by the number of words.
 seekritFunc x =
   div (sum (map length (words x)))
       (length (words x))
@@ -48,5 +48,8 @@ seekritFunc2 x = fromIntegral (sum (map length (words x))) /
 
 
 ## Rewriting functions using folds
+
+
+
 
 ##### 
